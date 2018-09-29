@@ -5,3 +5,4 @@ class Solution(object):
             return nums.index(target)
         return -1
         
+ print(Solution().search(nums,target))
