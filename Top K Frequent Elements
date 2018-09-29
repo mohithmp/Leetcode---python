@@ -1,0 +1,21 @@
+class Solution(object):
+    def topKFrequent(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        d={}
+        l=[]
+        for i in nums:
+            if i not in d:
+                d[i]=1
+            else:
+                d[i]+=1
+        d = sorted([(value,key) for (key,value) in d.items()])
+        a= d[-k:]
+        for i in a[::-1]:
+            l.append(i[-1])
+        return l
+        
+  print(Soluion().topKFrequent(nums,k)) 
